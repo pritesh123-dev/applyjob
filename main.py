@@ -15,9 +15,11 @@ templates = Jinja2Templates(directory="templates")
 SENDER_EMAIL = os.getenv("GMAIL_USER")
 SENDER_PASSWORD = os.getenv("GMAIL_PASS")
 
+
 @app.get("/", response_class=HTMLResponse)
 async def form_page(request: Request):
     return templates.TemplateResponse("form.html", {"request": request})
+
 
 @app.post("/send-email")
 async def send_email(
@@ -26,25 +28,27 @@ async def send_email(
     receiver_name: str = Form(...),
     position: str = Form(...),
     linkedin: str = Form(...),
-    github: str = Form(...)
+    github: str = Form(...),
 ):
-    subject = f"Applying for {position}"
-    greeting = f"Hi {receiver_name}," if receiver_name.strip() else "Dear Hiring Manager,"
+    subject = f"Application for {position} – Pritesh Kumar Sahoo"
+    greeting = (
+        f"Hi {receiver_name}," if receiver_name.strip() else "Dear Hiring Manager,"
+    )
 
     body = f"""
 {greeting}
 
-I am writing to express my interest in the {position} role. With over 3+ years of experience in frontend development using React.js, TypeScript, and Next.js, I specialize in building responsive, secure, scalable and high-performance web apps for enterprise and product-based applications.
+I am writing to express my strong interest in the {position} position at your organization.
 
-At I-Exceed Technology, I developed pagination and payment modules for banking systems, optimized performance using React Hooks, and implemented OTP-based authentication integrated with services like Twilio and Firebase. My work resulted in faster transaction speeds and enhanced security, aligning with PCI-DSS standards.
+As a Senior Software Engineer with over 3 years of hands-on experience, I specialize in building scalable, high-performance, and secure web applications using React.js, TypeScript, Golang, and PostgreSQL.
 
-Previously at Infosys, I built a Software Account Invitation Tool managing over 1,000 secure accounts. I applied TDD principles using Jest, implemented role-based access with JWT, and created dynamic dashboards with styled-components, which improved onboarding efficiency by 35%.
+At I-Exceed, I built robust React-based payment and billing modules, introduced OTP authentication with Twilio and Firebase, and developed Golang-based SNMP Telegraf plugins to process device logs—improving monitoring and security compliance. My work consistently aligns with PCI-DSS and other enterprise-grade standards.
 
-In addition to professional experience, I’ve developed personal projects including a Next.js-based animated portfolio and a full-stack job portal with AWS deployment and user authentication.
+During my tenure at Infosys, I developed a full-stack Software Account Invitation Tool using React and Golang, successfully managing 1,000+ secure accounts and improving onboarding time by 35%.
 
-My current CTC is ₹7.11 LPA, and I am currently serving a 30-day notice period. I am enthusiastic about joining a forward-thinking team where I can contribute my frontend expertise and continue to grow.
+In my personal projects, I’ve implemented a Role-Based Access Control (RBAC) system with full test coverage and integrated Swagger for API documentation. My animated Next.js portfolio and RBAC project are available on GitHub.
 
-Please find my resume attached. I look forward to the opportunity to discuss how I can contribute to your team.
+Please find my resume attached. I would be thrilled to contribute to your team and further elevate your digital platforms. I am available to join after a 30-day notice and currently drawing a CTC of ₹7.11 LPA.
 
 Best regards,  
 Pritesh Kumar Sahoo  
@@ -54,6 +58,7 @@ Pritesh Kumar Sahoo
 🔗 GitHub: {github}
 """
 
+    # Construct the email message
     message = MIMEMultipart()
     message["From"] = SENDER_EMAIL
     message["To"] = email_id
@@ -63,10 +68,14 @@ Pritesh Kumar Sahoo
     try:
         with open("CV_Pritesh_Kumar_Sahoo.pdf", "rb") as file:
             part = MIMEApplication(file.read(), Name="CV_Pritesh_Kumar_Sahoo.pdf")
-            part['Content-Disposition'] = 'attachment; filename="CV_Pritesh_Kumar_Sahoo.pdf"'
+            part["Content-Disposition"] = (
+                'attachment; filename="CV_Pritesh_Kumar_Sahoo.pdf"'
+            )
             message.attach(part)
     except FileNotFoundError:
-        return templates.TemplateResponse("form.html", {"request": request, "status": "Resume file not found!"})
+        return templates.TemplateResponse(
+            "form.html", {"request": request, "status": "❌ Resume file not found!"}
+        )
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
@@ -75,6 +84,8 @@ Pritesh Kumar Sahoo
             smtp.send_message(message)
         status = "✅ Email sent successfully!"
     except Exception as e:
-        status = f"Error sending email: {str(e)}"
+        status = f"❌ Error sending email: {str(e)}"
 
-    return templates.TemplateResponse("form.html", {"request": request, "status": status})
+    return templates.TemplateResponse(
+        "form.html", {"request": request, "status": status}
+    )
