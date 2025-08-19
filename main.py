@@ -48,7 +48,7 @@ During my tenure at Infosys, I developed a full-stack Software Account Invitatio
 
 In my personal projects, I’ve implemented a Role-Based Access Control (RBAC) system with full test coverage and integrated Swagger for API documentation. My animated Next.js portfolio and RBAC project are available on GitHub.
 
-Please find my resume attached. I would be thrilled to contribute to your team and further elevate your digital platforms. I am available to join after a 30-day notice and currently drawing a CTC of ₹7.11 LPA.
+Please find my resume attached. I would be thrilled to contribute to your team and further elevate your digital platforms. Currenlty, I am serving notice period and my LWD is 12th September 2025.
 
 Best regards,  
 Pritesh Kumar Sahoo  
