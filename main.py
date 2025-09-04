@@ -40,15 +40,17 @@ async def send_email(
 
 I am writing to express my strong interest in the {position} position at your organization.
 
-As a Senior Software Engineer with over 3 years of hands-on experience, I specialize in building scalable, high-performance, and secure web applications using React.js, TypeScript, Golang, and PostgreSQL.
+As a Senior Software Engineer with 3.5 years of experience, I specialize in developing scalable, high-performance, and secure applications using React.js, TypeScript, Golang, Java, Spring Boot, and PostgreSQL. My expertise spans frontend architecture, backend services, and database management, enabling me to deliver end-to-end solutions.
 
-At I-Exceed, I built robust React-based payment and billing modules, introduced OTP authentication with Twilio and Firebase, and developed Golang-based SNMP Telegraf plugins to process device logs—improving monitoring and security compliance. My work consistently aligns with PCI-DSS and other enterprise-grade standards.
+At I-Exceed Technology & Solution, I enhanced banking applications by optimizing React.js payment modules with pagination, lazy loading, and reusable UI components, reducing load times by 30%. I also built bill payment functionalities, integrated OTP authentication with Twilio and Firebase, and implemented JWT-based authentication with RBAC for improved security compliance. Additionally, I contributed to backend enhancements by fixing critical bugs and integrating APIs with Spring Boot.
 
-During my tenure at Infosys, I developed a full-stack Software Account Invitation Tool using React and Golang, successfully managing 1,000+ secure accounts and improving onboarding time by 35%.
+Previously, at Infosys, I developed a full-stack Software Account Invitation Tool using React.js and TypeScript, which streamlined the management of 1,000+ secure accounts and reduced onboarding time by 35%. I also engineered custom SNMP Telegraf plugins in Golang to capture and process device logs, significantly improving monitoring accuracy.
 
-In my personal projects, I’ve implemented a Role-Based Access Control (RBAC) system with full test coverage and integrated Swagger for API documentation. My animated Next.js portfolio and RBAC project are available on GitHub.
+Beyond professional work, I’ve built a Role-Based Access Control (RBAC) project with comprehensive unit and integration testing and integrated Swagger UI for seamless API documentation. I also maintain a Next.js portfolio showcasing responsive design and modern frontend practices.
 
-Please find my resume attached. I would be thrilled to contribute to your team and further elevate your digital platforms. Currenlty, I am serving notice period and my LWD is 20th September 2025.
+I am currently serving my notice period, with my last working day on 25th September 2025. I am eager to bring my expertise in full-stack development and secure application design to your team and contribute to building innovative, high-quality digital solutions.
+
+Please find my resume attached for your consideration. I look forward to the opportunity to discuss how my skills can add value to your organization.
 
 Best regards,  
 Pritesh Kumar Sahoo  
