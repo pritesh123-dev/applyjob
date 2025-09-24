@@ -48,7 +48,7 @@ Previously, at Infosys, I developed a full-stack Software Account Invitation Too
 
 Beyond professional work, I’ve built a Role-Based Access Control (RBAC) project with comprehensive unit and integration testing and integrated Swagger UI for seamless API documentation. I also maintain a Next.js portfolio showcasing responsive design and modern frontend practices.
 
-I am currently serving my notice period, with my last working day on 25th September 2025. I am eager to bring my expertise in full-stack development and secure application design to your team and contribute to building innovative, high-quality digital solutions.
+I am currently serving my notice period, with my last working day on 30th September 2025. I am eager to bring my expertise in full-stack development and secure application design to your team and contribute to building innovative, high-quality digital solutions.
 
 Please find my resume attached for your consideration. I look forward to the opportunity to discuss how my skills can add value to your organization.
 
